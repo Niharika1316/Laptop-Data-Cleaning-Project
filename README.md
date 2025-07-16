@@ -35,11 +35,11 @@ Used:
 ### ✅ 3. **Memory Column Decomposition in Excel**
 Using Excel formulas and logic, the unstructured `memory` column was split into:
 
-- `ssd_gb`: Total SSD capacity in GB
-- `hdd_gb`: Total HDD capacity in GB
-- `flash_storage_gb`: Flash-based storage capacity
-- `hybrid_gb`: Capacity of hybrid storage (converted TB to GB where needed)
-- `total_storage_gb`: Sum of all above storage types per laptop
+- `SSD`: Total SSD capacity in GB
+- `HDD`: Total HDD capacity in GB
+- `flash storage`: Flash-based storage capacity
+- `hybrid`: Capacity of hybrid storage (converted TB to GB where needed)
+- `total storage gb`: Sum of all above storage types per laptop
 
 This transformation handled:
 - Combined entries like `"128GB SSD + 1TB HDD"`
@@ -56,11 +56,11 @@ This transformation handled:
 | `weight_kg`        | Converted to float | Removed "kg", now numeric                    |
 | `inches`           | Filled & rounded   | Missing values filled with mean              |
 | `memory`           | Parsed & removed   | Split into detailed storage columns in Excel |
-| `ssd_gb`           | New column         | Extracted from `memory`                      |
-| `hdd_gb`           | New column         | Extracted from `memory`                      |
-| `flash_storage_gb` | New column         | Extracted from `memory`                      |
-| `hybrid_gb`        | New column         | Extracted from `memory`                      |
-| `total_storage_gb` | New column         | Sum of all storage components                |
+| `SSD`           | New column         | Extracted from `memory`                      |
+| `HDD`           | New column         | Extracted from `memory`                      |
+| `flash storage` | New column         | Extracted from `memory`                      |
+| `hybrid`        | New column         | Extracted from `memory`                      |
+| `total storage gb` | New column         | Sum of all storage components                |
 | `Unnamed: 0`       | Dropped            | Redundant index column                       |
 
 ---
